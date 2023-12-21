@@ -16,7 +16,7 @@ public class ReduceExample {
 		for (Participant participant : participantList) {
 			sumAge += participant.getAge();
 		}
-		double averageAgeByForLoop = sumAge / (double) participantList.size();
+		double averageAgeByForLoop = sumAge / (double)participantList.size();
 
 		System.out.println("For-Loop | Average Age: " + averageAgeByForLoop);
 
@@ -24,9 +24,11 @@ public class ReduceExample {
 		double averageAge = participantList.stream()
 			.mapToInt(Participant::getAge)
 			.reduce(0, (sum, age) -> sum + age)
-			/ (double) participantList.size();
+			/ (double)participantList.size();
 
 		System.out.println("Stream | Average Age: " + averageAge);
 
 	}
 }
+
+
